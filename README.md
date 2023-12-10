@@ -137,6 +137,15 @@ We runned a grid search for hyperparameters of LGBMRegressor.
 - In Gradient Boosting algorithms, such as LightGBM, trees are built sequentially. Each tree corrects the errors made by the previous ones. The final prediction is the sum of the predictions from all trees. Increasing n_estimators in gradient boosting typically improves the model's performance, but it may also increase the risk of overfitting. \\
 So more we increase it, more our model is efficient. Perhaps, it will also increase time complexity.
 - So, in this part, we will try to chose a good n_estimators between 200 and 6000 based on when the mae, rmse and r2 score don't change a lot when we increase it.
-- 
+
 ![A screenshot of a computer program Description automatically generated](images/n_estim.png)
 We decided to keep n_estimator=3000, because after we don't gain a lot of accuracy.
+
+After, we used grid search and tried to find the optimal model based on rmse score :
+**Our optimized Logistic Regression model is:
+{'colsample_bytree': 0.6,
+ 'learning_rate': 0.1,
+ 'max_depth': 12,
+ 'n_estimators': 3000,
+ 'num_leaves': 40,
+ 'subsample': 0.6}**
