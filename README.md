@@ -164,7 +164,7 @@ After, we used grid search and tried to find the optimal model based on rmse sco
 
 subsample: It controls the fraction of data points (rows) to be randomly sampled for each tree. A value of 0.6 indicates that 60% of the data will be used for building each tree.
 
-## Final Results
+**Final Results :**
 
 **- MAE = 67.04**
 **- RMSE = 125.4**
