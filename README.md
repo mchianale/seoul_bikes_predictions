@@ -1,6 +1,8 @@
 # seoul_bikes_predictions
 Machine Learning project using regression model to predict the number of rented bikes per day and per hour.
 
+<br>
+
 **Dataset :**
 [Link To Dataset](https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand) 
 **Initial Dataset :**
@@ -23,11 +25,39 @@ Machine Learning project using regression model to predict the number of rented 
 In a first part, we trained a regression model to predict Rented Bike Count.
 By saving this model, we create a flask api with a form html page, to run the model on inputs features values.
 **Steps :**
+- **Setting up instructions**
 - **Cleaning  & Analyse the Data**
 - **Normalize the Data**
 - **Experimental Training**
 - **Hyperparameter's Tuning of LGBMRegressor**
 - **Flask API**
+
+<br>
+
+## Instructions for Setting Up and Running the Flask Web Application
+
+### 1. Download the File
+Download the `seoul_bikes_predictions` file in `.zip` format from the shared space on Github.
+
+### 2. Unzip and Place the Folder
+Unzip the folder and place it in your desired location on your local machine.
+
+### 3. Launch Python Environment
+Launch a Python environment, such as Anaconda. If you are using a specific conda environment, activate it with the command:
+*conda enable env_name*
+
+### 4. Navigate to the Project Directory
+Open a terminal and navigate to the `seoul_bikes_predictions-main/code/api/` directory using the command:
+cd path/to/seoul_bikes_predictions-main/code/api/
+
+### 5. Launch the Flask Web Application
+Within the `api` directory, there is an `app.py` file which is used to launch the Flask web application. Execute the application by running the command:
+*flask –app app.py execute*
+
+### 6. Access the Application
+After executing the command, you will typically see a message like: `* Running on http://127.0.0.1:5000`. Open a web browser and go to `http://127.0.0.1:5000`. The form for the application should be displayed.
+
+<br>
 
 ## Cleaning & Analyse the Data,
 - **No missing values**
@@ -71,6 +101,8 @@ For example, we can see :
 - So the Rented Bikes Dataset highlights the behaviors of the inhabitants of seoul
 In conclusion, Keeping Day of Week is very interesting, it potentially increases Hour feature importance.
 
+<br>
+
 ## Normalize the Data
 **Visualization of continuous values :**
 ![A screenshot of a computer program Description automatically generated](images/continuous_distri.png)
@@ -88,15 +120,22 @@ We applied square root on it.
 ![A screenshot of a computer program Description automatically generated](images/wind_speed.png)
 We applied square root on it.
 
+<br>
+
 ## Sample of Final Dataset
 ![A screenshot of a computer program Description automatically generated](images/final_df.PNG)
+
+<br>
 
 ## Experimental Training
 We tried several models on our dataset with different test size :
 - models : ** **
 - test_sizes : **[0.1, 0.2]**
 
-We use three metrics to determine model performance.
+We conduct experiments with 10% and 20% of our data set aside as the test set. This approach allows us to understand how the model performs under different proportions of training and testing data, providing insights into the model's robustness and generalizability.
+
+We use the following 3 metrics to evaluate the performance of the different regression models :
+<br>
 
 ### Mean Absolute Error (MAE)
 The Mean Absolute Error measures the average of the absolute errors between predictions and actual values. It is simply the average of the absolute difference between each prediction and the real value. The formula for MAE is:
@@ -123,15 +162,22 @@ where `ȳ` is the average of the actual values. The R² score is a measure of h
   
 ![A screenshot of a computer program Description automatically generated](images/ex.PNG)
 
+<br>
+
+
 The best model by looking at metrics is LGMBRegressor.
 
-### 1. LGBMRegressor
+<br>
+
+### LGBMRegressor
 **LightGBM (Light Gradient Boosting Machine)** is a gradient boosting framework that uses tree-based learning algorithms. It's designed for distributed and efficient training, particularly on large datasets. LGBMRegressor is used for regression tasks and is known for its high performance and speed.
 
 **First Results Visualization :**
 
 ![A screenshot of a computer program Description automatically generated](images/res1.png)
 - Our results are good, in majority the error is close to the line y = 0. However, we can see some disparities for few values which are getting big error values.
+
+<br>
 
 ## Hyperparameter's Tuning of LGBMRegressor
 We runned a grid search for hyperparameters of LGBMRegressor.
@@ -168,6 +214,8 @@ After, we used grid search and tried to find the optimal model based on rmse sco
 **- num_leaves:** It controls the maximum number of leaves for each tree. Higher values make the model more complex but can lead to overfitting. A value of 40 means that each tree can have up to 40 leaves.
 
 subsample: It controls the fraction of data points (rows) to be randomly sampled for each tree. A value of 0.6 indicates that 60% of the data will be used for building each tree.
+
+<br>
 
 **Final Results :**
 
