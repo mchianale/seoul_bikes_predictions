@@ -88,3 +88,6 @@ We applied square root on it.
 ![A screenshot of a computer program Description automatically generated](images/wind_speed.png)
 We applied square root on it.
 
+## Sample of Final Dataset
+![A screenshot of a computer program Description automatically generated](images/final_df.png)
+
