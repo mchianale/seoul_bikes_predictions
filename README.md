@@ -153,9 +153,12 @@ After, we used grid search and tried to find the optimal model based on rmse sco
 
 **Parameters meanings :**
 **- colsample_bytree:** This parameter controls the fraction of features (columns) to be randomly sampled for each tree. A value of 0.6 means that, for each tree, 60% of the features will be used.
+
 **- learning_rate:** Also known as the shrinkage or step size, it determines the impact of each tree on the final prediction. A lower learning rate requires more trees but can result in better generalization. A common starting value is 0.1.
+
 **- max_depth:** This parameter limits the maximum depth of each tree. A value of 12 means that no tree will have a depth greater than 12.
 **- n_estimators:** The number of boosting rounds or trees to be built. In this case, 3000 trees will be created in the ensemble.
+
 **- num_leaves:** It controls the maximum number of leaves for each tree. Higher values make the model more complex but can lead to overfitting. A value of 40 means that each tree can have up to 40 leaves.
 
 subsample: It controls the fraction of data points (rows) to be randomly sampled for each tree. A value of 0.6 indicates that 60% of the data will be used for building each tree.
