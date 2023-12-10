@@ -89,5 +89,5 @@ We applied square root on it.
 We applied square root on it.
 
 ## Sample of Final Dataset
-![A screenshot of a computer program Description automatically generated](images/final_df.png)
+![A screenshot of a computer program Description automatically generated](images/final_df.PNG)
 
