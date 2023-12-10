@@ -59,7 +59,7 @@ Moreover, we added Day of week which have the smaller correlation with Rented Bi
 
 **Day of Week's Analysis :**
 **Frequency of the number of bikes rented depending on the day of the week :**
-![A screenshot of a computer program Description automatically generated](images/day_week_distribution.png)
+![A screenshot of a computer program Description automatically generated](images/day_week_distrib.png)
 
 Day of Week seems to not get an impact on Rented Bike Count. Because each day has the same frequency.
 
@@ -90,4 +90,11 @@ We applied square root on it.
 
 ## Sample of Final Dataset
 ![A screenshot of a computer program Description automatically generated](images/final_df.PNG)
+
+## Experimental Training
+We tried several models on our dataset with different test size :
+- models : ** **
+- test_sizes : **[0.1, 0.2]**
+![A screenshot of a computer program Description automatically generated](images/EX.PNG)
+
 
