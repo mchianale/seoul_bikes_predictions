@@ -29,4 +29,11 @@ Steps :
 - **Hyperparameter's Tuning of LGBMRegressor**
 - **Flask API**
 
-## Test
+## Cleaning & Analisyze the Data,
+- **No missing values**
+- **Convert Categorical Data by Mapping**
+
+**More about Date feature :**
+- We created 3 new columns : **Day**, **Month**, **Day of Week**.
+- We don't add Year because the dataset starts in 1/12/2017 and ends the 30/11/2018, so Year is just represented by 2018, in majority.
+- After this, we dropped Date.
