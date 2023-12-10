@@ -229,3 +229,9 @@ subsample: It controls the fraction of data points (rows) to be randomly sampled
 **- RMSE = 138.6**
 **- R2 = 95%**
 
+**Second Results Visualization :**
+
+![A screenshot of a computer program Description automatically generated](images/res2.png)
+
+We can see our model success better to be close to true values for values which it was already good to predict. Perhaps for the same values it failed to reduce the error.
+
