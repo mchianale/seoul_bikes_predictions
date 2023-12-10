@@ -22,8 +22,8 @@ Machine Learning project using regression model to predict the number of rented 
 **Goal :**
 In a first part, we trained a regression model to predict Rented Bike Count.
 By saving this model, we create a flask api with a form html page, to run the model on inputs features values.
-Steps :
-- **Cleaning the Data**
+**Steps :**
+- **Cleaning  & Analyse the Data**
 - **Normalize the Data**
 - **Experimental Training**
 - **Hyperparameter's Tuning of LGBMRegressor**
@@ -128,3 +128,7 @@ The best model by looking at metrics is LGMBRegressor.
 ### 1. LGBMRegressor
 **LightGBM (Light Gradient Boosting Machine)** is a gradient boosting framework that uses tree-based learning algorithms. It's designed for distributed and efficient training, particularly on large datasets. LGBMRegressor is used for regression tasks and is known for its high performance and speed.
 
+
+
+**Hyperparameter's Tuning of LGBMRegressor**
+We runned a grid search for hyperparameters of LGBMRegressor
