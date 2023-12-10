@@ -95,6 +95,7 @@ We applied square root on it.
 We tried several models on our dataset with different test size :
 - models : ** **
 - test_sizes : **[0.1, 0.2]**
-![A screenshot of a computer program Description automatically generated](images/EX.PNG)
+  
+![A screenshot of a computer program Description automatically generated](images/ex.PNG)
 
 
