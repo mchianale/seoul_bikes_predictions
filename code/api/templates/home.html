@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rented Bike Count Prediction Form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <style>
+            body {
+                padding-top: 20px;
+            }
+            .form-container {
+                background-color: #f7f7f7;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .form-control {
+                border-radius: 4px;
+                border: 1px solid #ced4da;
+            }
+            .btn-primary {
+                border: none;
+                border-radius: 4px;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="form-container">
+                        <h2 class="text-center">Rented Bike Count Prediction Form</h2>
+                        <form action="http://localhost:5000" method="POST">
+                            <!-- Form Fields -->
+                            <div class="form-group">
+                                <label for="query1">Date:</label>
+                                <input type="date" class="form-control" id="query1" name="query1" value="{{query1}}">
+                            </div>
+                            <!-- Hour Field -->
+                            <div class="form-group">
+                                <label for="query2">Hour:</label>
+                                <input type="time" class="form-control" id="query2" name="query2" placeholder="HH:MM" value="{{query2}}">
+                            </div>
+                            <!-- Temperature Field -->
+                            <div class="form-group">
+                                <label for="query3">Temperature (°C):</label>
+                                <input type="number" class="form-control" id="query3" name="query3" placeholder="Enter temperature" value="{{query3}}">
+                            </div>
+
+                            <!-- Humidity Field -->
+                            <div class="form-group">
+                                <label for="query4">Humidity (%):</label>
+                                <input type="number" step="0.001" class="form-control" id="query4" name="query4" placeholder="Enter wind speed" value="{{query4}}">
+                            </div>
+
+                            <!-- Wind Speed Field -->
+                            <div class="form-group">
+                                <label for="query5">Wind speed (m/s):</label>
+                                <input type="number" step="0.001" class="form-control" id="query5" name="query5" placeholder="Enter wind speed" value="{{query5}}">
+                            </div>
+
+                            <!-- Visibility Field -->
+                            <div class="form-group">
+                                <label for="query6">Visibility (10m):</label>
+                                <input type="number" class="form-control" id="query6" name="query6" placeholder="Enter visibility" value="{{query6}}">
+                            </div>
+
+                            <!-- Solar Radiation Field -->
+                            <div class="form-group">
+                                <label for="query7">Solar Radiation (MJ/m2):</label>
+                                <input type="number" step="0.001" class="form-control" id="query7" name="query7" placeholder="Enter solar radiation" value="{{query7}}">
+                            </div>
+
+                            <!-- Rainfall Field -->
+                            <div class="form-group">
+                                <label for="query8">Rainfall (mm):</label>
+                                <input type="number" step="0.001" class="form-control" id="query8" name="query8" placeholder="Enter rainfall" value="{{query8}}">
+                            </div>
+
+                            <!-- Snowfall Field -->
+                            <div class="form-group">
+                                <label for="query9">Snowfall (cm):</label>
+                                <input type="number" step="0.001" class="form-control" id="query9" name="query9" placeholder="Enter snowfall" value="{{query9}}">
+                            </div>
+
+                            <!-- Submission Button -->
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <!-- Output Fields -->
+                        <div class="row output-area" style="margin-top: 20px;"> 
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="output1" style="display: block; font-weight: bold; margin-bottom: 5px;">Rented Bike Count Prediction:</label>
+                                    <textarea class="form-control" id="output1" name="output1" rows="2" style="border: 1px solid #ced4da; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" readonly>{{output1}}</textarea>
+                                </div>
+                                <div class="form-group" style="margin-top: 10px;">
+                                    <label for="output2" style="display: block; font-weight: bold; margin-bottom: 5px;">Holiday:</label>
+                                    <textarea class="form-control" id="output2" name="output2" rows="2" style="border: 1px solid #ced4da; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" readonly>{{output2}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
