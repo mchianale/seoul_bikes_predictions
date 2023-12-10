@@ -128,6 +128,10 @@ The best model by looking at metrics is LGMBRegressor.
 ### 1. LGBMRegressor
 **LightGBM (Light Gradient Boosting Machine)** is a gradient boosting framework that uses tree-based learning algorithms. It's designed for distributed and efficient training, particularly on large datasets. LGBMRegressor is used for regression tasks and is known for its high performance and speed.
 
+**First Results Visualization :**
+
+![A screenshot of a computer program Description automatically generated](images/res1.png)
+- Our results are good, in majority the error is close to the line y = 0. However, we can see some disparities for few values which are getting big error values.
 
 ## Hyperparameter's Tuning of LGBMRegressor
 We runned a grid search for hyperparameters of LGBMRegressor.
