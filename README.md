@@ -130,5 +130,12 @@ The best model by looking at metrics is LGMBRegressor.
 
 
 
-**Hyperparameter's Tuning of LGBMRegressor**
-We runned a grid search for hyperparameters of LGBMRegressor
+## Hyperparameter's Tuning of LGBMRegressor**
+We runned a grid search for hyperparameters of LGBMRegressor.
+**First to gain time complexity, we found a good n_estimator :**
+- This parameter defines the number of trees (or base learners) to be built in the ensemble.
+- In Gradient Boosting algorithms, such as LightGBM, trees are built sequentially. Each tree corrects the errors made by the previous ones. The final prediction is the sum of the predictions from all trees. Increasing n_estimators in gradient boosting typically improves the model's performance, but it may also increase the risk of overfitting. \\
+So more we increase it, more our model is efficient. Perhaps, it will also increase time complexity.
+- So, in this part, we will try to chose a good n_estimators between 200 and 6000 based on when the mae, rmse and r2 score don't change a lot when we increase it.
+![A screenshot of a computer program Description automatically generated](images/n_estim.PNG)
+We decided to keep n_estimator=3000, because after we don't gain a lot of accuracy.
