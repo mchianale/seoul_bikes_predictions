@@ -95,7 +95,36 @@ We applied square root on it.
 We tried several models on our dataset with different test size :
 - models : ** **
 - test_sizes : **[0.1, 0.2]**
+
+We use three metrics to determine model performance.
+
+### Mean Absolute Error (MAE)
+The Mean Absolute Error measures the average of the absolute errors between predictions and actual values. It is simply the average of the absolute difference between each prediction and the real value. The formula for MAE is:
+
+`MAE = 1/n * Σ|y_i - ŷ_i|`
+
+where `y_i` is the actual value and `ŷ_i` is the predicted value. MAE gives an idea of the magnitude of errors in the predictions, ignoring their direction (positive or negative). A lower MAE indicates better model performance.
+
+### Root Mean Squared Error (RMSE)
+RMSE is similar to MAE but gives more weight to larger errors as it squares the errors before averaging and then takes the square root of the average to obtain RMSE. The formula for RMSE is:
+
+`RMSE = sqrt(1/n * Σ(y_i - ŷ_i)²)`
+
+RMSE is useful when larger errors are particularly undesirable. A lower RMSE value indicates better model performance.
+
+### R² Score (Coefficient of Determination)
+The R² score measures the proportion of the variance in the dependent variable that is predictable from the independent variables in the model. The formula for R² is:
+
+`R² = 1 - (Σ(y_i - ŷ_i)² / Σ(y_i - ȳ)²)`
+
+where `ȳ` is the average of the actual values. The R² score is a measure of how well a model fits the data. A score of 1 indicates a perfect fit, while a score of 0 would mean the model is no better than simply predicting the mean of the dependent variable for all observations.
+
+
   
 ![A screenshot of a computer program Description automatically generated](images/ex.PNG)
 
+The best model by looking at metrics is LGMBRegressor.
+
+### 1. LGBMRegressor
+**LightGBM (Light Gradient Boosting Machine)** is a gradient boosting framework that uses tree-based learning algorithms. It's designed for distributed and efficient training, particularly on large datasets. LGBMRegressor is used for regression tasks and is known for its high performance and speed.
 
