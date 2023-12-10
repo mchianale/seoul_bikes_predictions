@@ -57,6 +57,10 @@ Within the `api` directory, there is an `app.py` file which is used to launch th
 ### 6. Access the Application
 After executing the command, you will typically see a message like: `* Running on http://127.0.0.1:5000`. Open a web browser and go to `http://127.0.0.1:5000`. The form for the application should be displayed.
 
+### 7. Note
+We use a free access weather api, to from a date, return if is it a holiday date or not :
+[Link to Weather API](https://github.com/nager/Nager.Date/tree/main/doc)
+
 <br>
 
 ## Cleaning & Analyse the Data,
