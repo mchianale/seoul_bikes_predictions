@@ -152,6 +152,7 @@ After, we used grid search and tried to find the optimal model based on rmse sco
 }
 
 **Parameters meanings :**
+
 **- colsample_bytree:** This parameter controls the fraction of features (columns) to be randomly sampled for each tree. A value of 0.6 means that, for each tree, 60% of the features will be used.
 
 **- learning_rate:** Also known as the shrinkage or step size, it determines the impact of each tree on the final prediction. A lower learning rate requires more trees but can result in better generalization. A common starting value is 0.1.
@@ -164,10 +165,13 @@ After, we used grid search and tried to find the optimal model based on rmse sco
 subsample: It controls the fraction of data points (rows) to be randomly sampled for each tree. A value of 0.6 indicates that 60% of the data will be used for building each tree.
 
 ## Final Results
+
 **- MAE = 67.04**
 **- RMSE = 125.4**
 **- R2 = 96 %**
+
 **Previous score in comparaison :**
+
 **- MAE = 73.6**
 **- RMSE = 138.6**
 **- R2 = 95%**
