@@ -60,6 +60,7 @@ Moreover, we added Day of week which have the smaller correlation with Rented Bi
 **Day of Week's Analysis :**
 **Frequency of the number of bikes rented depending on the day of the week :**
 ![A screenshot of a computer program Description automatically generated](images/day_week_distribution.png)
+
 Day of Week seems to not get an impact on Rented Bike Count. Because each day has the same frequency.
 
 Perhaps, if we combine Day of Week with Hour, We can see interesting behaviors in the average number of bikes rented depending on the day of the week and time of day.
@@ -67,4 +68,15 @@ Perhaps, if we combine Day of Week with Hour, We can see interesting behaviors i
 For example, we can see :
 - We can see that, for each day, at 18 hour, there are a lot of rented bike. It can be explain by the fact that people go back to work or go out during the weekend .
 - At 8 hour, a lot of bikes are rented, except for the weekend. It can be explain by the fact that people go to work at this hour.
+- So the Rented Bikes Dataset highlights the behaviors of the inhabitants of seoul
+In conclusion, Keeping Day of Week is very interesting, it potentially increases Hour feature importance.
+
+## Normalize the Data
+**Visualization of continuous values :**
+![A screenshot of a computer program Description automatically generated](images/continuous_distri.png)
+- 'Rented Bike Count' is not normally distributed.
+- 'Wind speed (m/s)' is not normally distributed.
+- 'Temperature(°C)' doesn't need transformation.
+- 'Humidity(%)' doesn't need transformation.
+- We can't apply normalization at 'Visibility (10m)', 'Solar Radiation (Mj/m2)', 'Rainfall(mm)' and 'Snowfall (cm)'.
 
