@@ -35,5 +35,8 @@ Steps :
 
 **More about Date feature :**
 - We created 3 new columns : **Day**, **Month**, **Day of Week**.
-- We don't add Year because the dataset starts in 1/12/2017 and ends the 30/11/2018, so Year is just represented by 2018, in majority.
+- We don't add Year because the dataset starts in 1/12/2017 and ends the 30/11/2018, so in majority, Year is just represented by 2018.
 - After this, we dropped Date.
+
+**Quick view of the distribution of each data :**
+![A screenshot of a computer program Description automatically generated](images/distribution.png)
