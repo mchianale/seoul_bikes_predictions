@@ -29,7 +29,7 @@ Steps :
 - **Hyperparameter's Tuning of LGBMRegressor**
 - **Flask API**
 
-## Cleaning & Analisyze the Data,
+## Cleaning & Analyse the Data,
 - **No missing values**
 - **Convert Categorical Data by Mapping**
 
@@ -40,3 +40,31 @@ Steps :
 
 **Quick view of the distribution of each data :**
 ![A screenshot of a computer program Description automatically generated](images/distribution.png)
+- In a quick view, we can see that few continuous features are not well distributed, especially Snowfall, Rainfall, Visibility and Solar Radiation.
+- For categorical data, None Functioning Day are under represented.
+
+**Distribution of Rented Bike Count in depends of Categorical Features :**
+![A screenshot of a computer program Description automatically generated](images/cat_distribution.png)
+We can see that feature 'Functioning Day' will not be useful because there are 0 counted rented bike when it is not a functioning day.  \\
+So, we don't need Functioning Day column, so :
+- First, we drop all rows where the day is not a functioning Day.
+- After, we drop all the column.
+
+**Correlation :**
+![A screenshot of a computer program Description automatically generated](images/corr.png)
+We need to drop 'Dew point temperature(°C)' because :
+- it is to much correlate with 'Temperature(°C)'
+- but 'Temperature(°C)' has a better correlation with 'Rented Bike Count'
+Moreover, we added Day of week which have the smaller correlation with Rented Bike Count, but we didn't dropped it, we will see later why.
+
+**Day of Week's Analysis :**
+**Frequency of the number of bikes rented depending on the day of the week :**
+![A screenshot of a computer program Description automatically generated](images/day_week_distribution.png)
+Day of Week seems to not get an impact on Rented Bike Count. Because each day has the same frequency.
+
+Perhaps, if we combine Day of Week with Hour, We can see interesting behaviors in the average number of bikes rented depending on the day of the week and time of day.
+![A screenshot of a computer program Description automatically generated](images/day_week_hour.png)
+For example, we can see :
+- We can see that, for each day, at 18 hour, there are a lot of rented bike. It can be explain by the fact that people go back to work or go out during the weekend .
+- At 8 hour, a lot of bikes are rented, except for the weekend. It can be explain by the fact that people go to work at this hour.
+
