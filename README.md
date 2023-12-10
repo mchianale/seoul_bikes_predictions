@@ -79,4 +79,12 @@ In conclusion, Keeping Day of Week is very interesting, it potentially increases
 - 'Temperature(°C)' doesn't need transformation.
 - 'Humidity(%)' doesn't need transformation.
 - We can't apply normalization at 'Visibility (10m)', 'Solar Radiation (Mj/m2)', 'Rainfall(mm)' and 'Snowfall (cm)'.
+  
+**Normalization methods on Rented Bike COunt :**
+![A screenshot of a computer program Description automatically generated](images/rented_bike_count.png)
+We applied square root on it.
+
+**Normalization methods on Wind Speed :**
+![A screenshot of a computer program Description automatically generated](images/wind_speed.png)
+We applied square root on it.
 
