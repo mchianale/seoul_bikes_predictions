@@ -141,7 +141,8 @@ So more we increase it, more our model is efficient. Perhaps, it will also incre
 We decided to keep n_estimator=3000, because after we don't gain a lot of accuracy.
 
 After, we used grid search and tried to find the optimal model based on rmse score :
-**Our optimized Logistic Regression model is:
+**Our optimized Logistic Regression model is:**
+
 {
 **- 'colsample_bytree': 0.6,**
 **- 'learning_rate': 0.1,**
