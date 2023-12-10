@@ -129,8 +129,7 @@ The best model by looking at metrics is LGMBRegressor.
 **LightGBM (Light Gradient Boosting Machine)** is a gradient boosting framework that uses tree-based learning algorithms. It's designed for distributed and efficient training, particularly on large datasets. LGBMRegressor is used for regression tasks and is known for its high performance and speed.
 
 
-
-## Hyperparameter's Tuning of LGBMRegressor**
+## Hyperparameter's Tuning of LGBMRegressor
 We runned a grid search for hyperparameters of LGBMRegressor.
 **First to gain time complexity, we found a good n_estimator :**
 - This parameter defines the number of trees (or base learners) to be built in the ensemble.
@@ -143,9 +142,18 @@ We decided to keep n_estimator=3000, because after we don't gain a lot of accura
 
 After, we used grid search and tried to find the optimal model based on rmse score :
 **Our optimized Logistic Regression model is:
-{'colsample_bytree': 0.6,
- 'learning_rate': 0.1,
- 'max_depth': 12,
- 'n_estimators': 3000,
- 'num_leaves': 40,
- 'subsample': 0.6}**
+{
+- 'colsample_bytree': 0.6,
+- 'learning_rate': 0.1,
+- 'max_depth': 12,
+- 'n_estimators': 3000,
+- 'num_leaves': 40,
+- 'subsample': 0.6
+- }**
+
+## Final Results
+67.0425643078323 125.4122718343647 0.9595396040221946
+MAE = 67.04
+RMSE = 125.4
+R2 = 96 %
+
